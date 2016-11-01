@@ -8,9 +8,8 @@ const config = {
         filename: './app.bundle.js',
         publicPath: '/build/'
     },
-    plugins: [new webpack.DllReferencePlugin({
-        context: '.',
-        manifest: require('./../build/vendor-manifest.json'),
+    plugins: [new webpack.ProvidePlugin({
+        'regeneratorRuntime':'babel-runtime/regenerator'
     })],
     module: {
         loaders: [
