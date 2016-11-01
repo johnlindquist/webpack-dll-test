@@ -2,11 +2,12 @@ const webpack = require('webpack')
 
 const config = {
     entry: {
-        'vendor': ['babel-runtime/regenerator/index']
+        'vendor': ['./vendor']
     },
     output: {
         path: './build',
-        filename: './vendor.bundle.js'
+        filename: './vendor.bundle.js',
+        library: 'vendor_lib'
     },
     plugins: [new webpack.DllPlugin({
         name: 'vendor_lib',

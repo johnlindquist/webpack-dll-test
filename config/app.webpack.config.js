@@ -5,7 +5,8 @@ const config = {
     },
     output: {
         path: '/build',
-        filename: './app.bundle.js'
+        filename: './app.bundle.js',
+        publicPath: '/build/'
     },
     plugins: [new webpack.DllReferencePlugin({
         context: '.',
