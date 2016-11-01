@@ -1,1 +1,1 @@
-import 'babel-runtime/regenerator/index'
+import 'babel-polyfill'
